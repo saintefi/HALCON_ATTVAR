@@ -1,0 +1,13 @@
+blockLen:=|BLOCK_ID|
+ifelse (blockLen != NBR_OF_BLOCKS) 
+    disp_message(3600,'Paramter Mismatch','image',0,0,'red','true')
+else
+    open_file ('C:/Users/saint/Desktop/standard.txt', 'output', FileHandle)
+    fwrite_string (FileHandle, SOURCE +'ATTVAR')
+    close_file(FileHandle)
+    open_file('C:/Users/saint/Desktop/standard.txt','append', FileHandle)
+    fwrite_string(FileHandle,NBR_OF_BLOCKS)
+    
+    
+endif
+return ()
