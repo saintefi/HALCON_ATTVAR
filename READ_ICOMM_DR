@@ -1,0 +1,11 @@
+list_files (DIRECTORY, 'files', Files)
+for Index := 1 to |Files|-1 by 1
+ lName:= |Files[Index]| 
+ tuple_split(Files[Index],'.',Substrings)
+ if(|Substrings|=2)
+     if (Substrings[1]='txt')
+         FILENAME:=Substrings[0]+'.'+Substrings[1]
+     endif
+ endif
+endfor
+return ()
